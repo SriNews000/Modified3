@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Corona</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<style>
+			* {
+			  box-sizing: border-box;
+			}
+
+			body {
+			  font-family: Arial, Helvetica, sans-serif;
+			}
+
+			/* Style the header */
+			.header {
+
+			  padding: 30px;
+			  text-align: center;
+			  font-size: 35px;
+			  background: url("corona.jpg");
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-attachment: fixed;
+					background-size: cover;
+					color:white;
+					border-bottom-style:solid ;
+			}
+
+			/* Create three equal columns that floats next to each other */
+			.column1,.column2,.column3,.column4,.column5 {
+			  float: left;
+			  width: 20%;
+			  padding: 10px;
+			 /* Should be removed. Only for demonstration */
+			 height:500px;
+			  text-align: center;
+			}
+
+			/* Clear floats after the columns */
+			.row:after {
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+			/* Style the footer */
+			.footer{
+			 background-color:#042329;
+			 color:white;
+			 font-size:20px; 
+			 
+			}
+			.fote{
+				font-size:20px;
+				
+			}
+			/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+			@media (max-width: 600px) {
+			  .column {
+				width: 100%;
+			  }
+			}
+</style>
+</head>
+<body>
+
+
+
+<div class="header">
+   	<div align="right">
+		<form>
+			<input type="button" value="Back" onclick="history.go(-1)">
+		</form>
+    </div>
+	<div align="center">
+        <h2>CoronaVirus</h2>
+	</div> 
+</div>
+
+<div class="row">
+    <div class="column1" style="background-color:#aaa;"><h3>Sri Lanka</h3>
+      <img src="srilanka.png" alt="Italian Trulli" style="width:50px">
+      <h4> Total confirmed </h4>
+      <h4 style = "color: black;" id = "totalconfirmed"></h4>
+
+      <h4> New confirmed </h4>
+      <h4 style = "color: black;" id = "newconfirmed"></h4>
+
+      <h4> Total deaths </h4>
+      <h4 style = "color: black;" id = "totaldeaths"></h4>
+
+      <h4> Total Recovered </h4>
+      <h4 style = "color: black;" id = "totalrecovered"></h4>
+    
+    </div>
+    <div class="column2" style="background-color:#bbb;"><h3>World</h3>
+      <img src="world2.png" alt="Italian Trulli" style="width:50px">
+      <h4> Total confirmed </h4>
+      <h4 style = "color: black;" id = "totalconfirmed1"></h4>
+
+      <h4> New confirmed </h4>
+      <h4 style = "color: black;" id = "newconfirmed1"></h4>
+
+      <h4> Total deaths </h4>
+      <h4 style = "color: black;" id = "totaldeaths1"></h4>
+
+      <h4> Total Recovered </h4>
+      <h4 style = "color: black;" id = "totalrecovered1"></h4>
+    
+    </div>
+    <div class="column3" style="background-color:#ccc;"><h3>India</h3>
+        <img src="india.png" alt="Italian Trulli" style="width:50px">
+      <h4> Total confirmed </h4>
+      <h4 style = "color: black;" id = "totalconfirmed2"></h4>
+
+      <h4> New confirmed </h4>
+      <h4 style = "color: black;" id = "newconfirmed2"></h4>
+
+      <h4> Total deaths </h4>
+      <h4 style = "color: black;" id = "totaldeaths2"></h4>
+
+      <h4> Total Recovered </h4>
+      <h4 style = "color: black;" id = "totalrecovered2"></h4>
+    
+    
+    </div>
+    <div class="column4" style="background-color:#ddd;"><h3>USA</h3>
+        <img src="usa.png" alt="Italian Trulli" style="width:50px">
+        <h4> Total confirmed </h4>
+        <h4 style = "color: black;" id = "totalconfirmed3"></h4>
+  
+        <h4> New confirmed </h4>
+        <h4 style = "color: black;" id = "newconfirmed3"></h4>
+  
+        <h4> Total deaths </h4>
+        <h4 style = "color: black;" id = "totaldeaths3"></h4>
+  
+        <h4> Total Recovered </h4>
+        <h4 style = "color: black;" id = "totalrecovered3"></h4>
+    
+    </div>
+    <div class="column5" style="background-color:#eee;"><h3>Brazil</h3>
+        <img src="brazil.png" alt="Italian Trulli" style="width:50px">
+        <h4> Total confirmed </h4>
+        <h4 style = "color: black;" id = "totalconfirmed4"></h4>
+  
+        <h4> New confirmed </h4>
+        <h4 style = "color: black;" id = "newconfirmed4"></h4>
+  
+        <h4> Total deaths </h4>
+        <h4 style = "color: black;" id = "totaldeaths4"></h4>
+  
+        <h4> Total Recovered </h4>
+        <h4 style = "color: black;" id = "totalrecovered4"></h4>
+    
+    </div>
+</div>
+
+<!---------------------------------------------------footer------------------------------------------------------------------------------------------->
+<footer>
+<div class="footer">
+	<table style="width:100%" border ="0" width = "20%" height = "10%">
+	<tr>
+		<td width="40%" style = "text-decoration: none; color:white ;font-size: 25px; font-family: monospace;"> Contact us</td>
+		<td></td>
+		<td width="30%" style = "text-decoration: none; color:white ;font-size: 25px; font-family: monospace;"> About us</td> 
+	</tr>
+	<div>
+	<tr>
+		<div class="fote">
+			<td><br>E-mail: srinews000@gmail.com  &nbsp&nbsp&nbsp&nbsp   Reach us  : +94775665547
+			</td>
+			<center>
+			<td>
+			</td>
+			</center>
+			<td>
+				<img class = "fb" src="facebook.png" width="20" height="20" alt="facebook">
+				<a href ="https://www.facebook.com" style="color:white">Facebook</a>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<img class = "tute" src="tute.jpg" width="20" height="20" alt="twitter">
+				<a href ="https://twitter.com/login" style="color:white" class ="alineword">Twitter </a>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<img class = "insta" src="instagram.png" width="20" height="20" alt="instagram">
+				<a href ="https://www.instagram.com" style="color:white"class ="alineword">Instagram</a>
+			</td>
+	</tr>
+	<tr>
+	</tr>  
+	<tr>
+		<td></td>
+		<td><br>Sri News.co(pvt)Ltd, No.6, Beach rd, Colombo 3 
+		</td>
+	</tr>
+		<br>
+		<br>
+		<br>
+		</div>
+	</table>
+	</div>
+		<p align = center>University of Colombo School of Computing <br> Group Project</p>
+<script src = "corona.js"></script>
+</footer>
+</body>
+</html>

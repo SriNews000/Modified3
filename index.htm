@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<title>Sri News</title>
+		<script src="myscript.js" type="text/javascript">  </script>  
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<style>
+			* {
+				box-sizing: border-box;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			body {
+				margin: 0;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color:black;
+ 
+			}
+
+			li {
+			
+				float: left;  
+			}
+
+			li a, .dropbtn {
+				display: inline-block;
+				color: white;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
+
+			li a:hover, .dropdown:hover .dropbtn {
+				background-color: red;
+			}
+
+			li.dropdown {
+				display: inline-block;
+			}
+
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+			}
+
+			.dropdown-content a {
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+				text-align: left;
+			}
+
+			.dropdown-content a:hover {background-color: #f1f1f1;}
+
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
+
+			/* Style the content */
+			.content {
+			  background-color: #ddd;
+			  padding: 10px;
+			  background: url("news.jpg");
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-attachment: fixed;
+					background-size: cover;
+			 
+			 
+				   
+			  /* Should be removed. Only for demonstration */
+			}
+			/*input ,search*/
+			.grid-container {
+			  margin-top: 250px;
+			  display: grid;
+			  grid-template-columns: 33.33% 33.33% 33.33%;
+			  
+
+			  padding: 10px;
+			  
+			  
+			}
+			.grid-item {
+			 
+			  padding: 20px;
+			  font-size: 15px;
+			  text-align: center;
+			  
+			}
+			.searching{
+			  background-color: beige;
+			}
+			#time{
+			  background-color: dodgerblue;
+			  padding:5px;
+			  border-radius: 8px;
+			  text-align: center;
+			}
+
+			.mySlides {display:none;}
+
+			.Images {
+				display: block;
+				width: 25%;
+				margin-left:auto;
+				margin-right:auto;
+			}
+
+			/* Style the footer */
+			.footer{
+			 background-color:#042329;
+			 color:white;
+			 font-size:20px; 
+			 
+			}
+			.fote{
+				font-size:20px;
+				
+			}
+		</style>
+
+</head>
+
+
+<body>
+			
+  <ul>
+	<h2 style = "text-align: center;color:#f9f9f9;font-family: 'Courier New', Courier, monospace;font-size: 75px;">Sri News  </h2> 
+	<div id = "time">
+	<div id = "date" style = "color:white;"></div>
+	<div id = "day" style = "color:white;"></div>
+	</div>
+	</br>
+    <script>
+      var d = new Date();
+      var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      document.getElementById("date").innerHTML = days[d.getDay()];
+	  var today = new Date();
+	  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+	  document.getElementById("day").innerHTML = date;
+	</script>
+    <li class = "dropdown">
+      <a href="javascript:void(0)" class="dropbtn" >News</a>
+      <div class="dropdown-content">
+        <a href="world.htm"target = "_self">World</a>
+        <a href="asia.htm"target = "_self">Asia</a>
+      </div>
+    <li><a href="sport.htm" target = "_self">Sports</a></li>
+	<li><a href="tech.htm" target = "_self">Technical</a></li>
+	<li><a href="science.htm" target = "_self">Science</a></li>
+    <li><a href="corona.htm" target = "_self">CoronaVirus</a></li>
+    <li><a href="weather.htm" target = "_self">Weather</a></li>
+    <li style ="float:right;" class = "input"> 
+      <input type="text" placeholder="search for news" class="inputValue" id = "text" >
+      <input  type="submit" value="Search"  class="button"  >
+      <input  type="submit" value="Reset"  class="button1"  onclick = "myFunction2()">
+    </li>    
+  </ul>
+
+
+<div class="content">
+	<div class = "searching">
+	<div id = "search"></div>
+	<div id = "search1"></div>
+	</div>
+	
+	<div class="grid-container" >
+  
+  
+    <div class="grid-item" style = "color: white;border-right-style: solid; border-bottom-style: solid">
+        <div id = "div1">1
+
+        </div>
+        <div id = "div2" >
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="grid-item" style = "color: white; border-right-style: solid;border-bottom-style: solid">
+        <div id = "div3" >2
+
+        </div>
+        <div id = "div4" >
+
+        </div>
+
+    </div>
+    <div class="grid-item" style = "color: white;border-bottom-style: solid" >
+      <div id = "div5">3
+
+      </div>
+      <div id = "div6">
+
+      </div>
+    </div>  
+    <div class="grid-item" style = "color:white; border-right-style: solid;border-bottom-style: solid">
+      <div id = "div7" >4
+
+      </div>
+      <div id = "div8" >
+
+      </div>
+
+    </div>
+    <div class="grid-item" style = "color: white; border-right-style: solid;border-bottom-style: solid"  >
+      <div id = "div9">5
+
+      </div>
+      <div id = "div10">
+
+      </div>
+
+    </div>
+    <div class="grid-item" style = "color: white;border-bottom-style: solid">
+      <div id = "div11" >6
+
+      </div>
+      <div id = "div12" >
+
+      </div>
+
+    </div>  
+    <div class="grid-item" style = "color: white; border-right-style: solid;">
+      <div id = "div13">7
+
+      </div>
+      <div id = "div14" >
+
+      </div>
+
+    </div>
+    <div class="grid-item" style = "color:white; border-right-style: solid;">
+      <div id = "div15" >8
+
+      </div>
+      <div id = "div16" >
+
+      </div>
+
+    </div>
+    <div class="grid-item" style = "color: white;">
+      <div id = "div17">9
+
+      </div>
+      <div id = "div18">
+
+      </div>
+
+    </div>  
+  </div>
+  
+ 
+</div>
+
+<!---------------------------------------------------footer------------------------------------------------------------------------------------------->
+<footer>
+<div class="footer">
+	<table style="width:100%" border ="0" width = "20%" height = "10%">
+	<tr>
+		<td width="40%" style = "text-decoration: none; color:white ;font-size: 25px; font-family: monospace;"> Contact us</td>
+		<td></td>
+		<td width="30%" style = "text-decoration: none; color:white ;font-size: 25px; font-family: monospace;"> About us</td> 
+	</tr>
+	<div>
+	<tr>
+		<div class="fote">
+			<td><br>E-mail: srinews000@gmail.com  &nbsp&nbsp&nbsp&nbsp   Reach us  : +94775665547
+			</td>
+			<center>
+			<td>
+			</td>
+			</center>
+			<td>
+				<img class = "fb" src="facebook.png" width="20" height="20" alt="facebook">
+				<a href ="https://www.facebook.com" style="color:white">Facebook</a>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<img class = "tute" src="tute.jpg" width="20" height="20" alt="twitter">
+				<a href ="https://twitter.com/login" style="color:white" class ="alineword">Twitter </a>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<img class = "insta" src="instagram.png" width="20" height="20" alt="instagram">
+				<a href ="https://www.instagram.com" style="color:white"class ="alineword">Instagram</a>
+			</td>
+	</tr>
+	<tr>
+	</tr>  
+	<tr>
+		<td></td>
+		<td><br>Sri News.co(pvt)Ltd, No.6, Beach rd, Colombo 3 
+		</td>
+	</tr>
+		<br>
+		<br>
+		<br>
+		</div>
+	</table>
+	</div>
+		<p align = center>University of Colombo School of Computing <br> Group Project</p>
+
+<script src = "news.js"></script>
+
+</footer>
+
+</body>
+</html>
