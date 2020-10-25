@@ -5,11 +5,11 @@ function getCovidStats() {
 	.then(function(resp) { return resp.json() })
 	.then(function(data) {
 //Sri lanka		
-		var nConfirmed = data["Countries"][157]["NewConfirmed"];
-		var tConfirmed = data["Countries"][157]["TotalConfirmed"];
+		var nConfirmed = data["Countries"][160]["NewConfirmed"];
+		var tConfirmed = data["Countries"][160]["TotalConfirmed"];
 		
-		var tDeaths = data["Countries"][157]["TotalDeaths"];
-		var tRecoverd = data["Countries"][157]["TotalRecovered"];
+		var tDeaths = data["Countries"][160]["TotalDeaths"];
+		var tRecoverd = data["Countries"][160]["TotalRecovered"];
 
 		
 		document.getElementById('newconfirmed').innerHTML = nConfirmed.toLocaleString('en');
