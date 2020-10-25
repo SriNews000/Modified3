@@ -46,11 +46,11 @@ document.getElementById('totaldeaths2').innerHTML = tDeaths1.toLocaleString('en'
 document.getElementById('totalrecovered2').innerHTML = tRecoverd1.toLocaleString('en');
 
 //usa
-var nConfirmed1 = data["Countries"][177]["NewConfirmed"];
-var tConfirmed1 = data["Countries"][177]["TotalConfirmed"];
+var nConfirmed1 = data["Countries"][180]["NewConfirmed"];
+var tConfirmed1 = data["Countries"][180]["TotalConfirmed"];
 
-var tDeaths1 = data["Countries"][177]["TotalDeaths"];
-var tRecoverd1 = data["Countries"][177]["TotalRecovered"];
+var tDeaths1 = data["Countries"][180]["TotalDeaths"];
+var tRecoverd1 = data["Countries"][180]["TotalRecovered"];
 
 
 document.getElementById('newconfirmed3').innerHTML = nConfirmed1.toLocaleString('en');
